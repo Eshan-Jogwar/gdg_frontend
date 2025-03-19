@@ -73,7 +73,7 @@ function Search() {
         setLoading(true);
         
         // Initialize the API
-        const apiKey = "AIzaSyASpnXXBsrI3QjXRrxuR9Z5VNHrIxn3kJ8"; // Replace with your actual API key
+        const apiKey = ""; // Replace with your actual API key
         const genAI = new GoogleGenerativeAI(apiKey);
         const model = genAI.getGenerativeModel({ model: "gemini-pro" });
         
