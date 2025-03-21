@@ -1,0 +1,121 @@
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 100px;
+    background-color: black;
+}
+
+.ribbonButton{
+    color: white;
+    font-size: 2rem;
+    margin: 10px;
+    border: solid 2px white;
+    padding: 10px;
+    &:hover{
+        background-color: white;
+        color: black;
+    }
+}
+
+body{
+    overflow-x: hidden;
+}
+
+.searchBarWrapper{
+    position: relative;
+    width: 100vw;
+    margin-top: 20px;
+    padding: 10px;
+    height: 40px;
+}
+
+.inputBarClass{
+    margin: "10px";
+    margin-right: "30px";
+    width: "50vw"
+}
+
+.inputHolder{
+    position: absolute;
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.submitButton{
+    font-size: 1.5rem;
+    background-color: yellowgreen;
+    border-radius: 20px;
+    height: fit-content;
+    width: fit-content;
+    padding: 10px;
+    &:hover{
+        background-color: rgb(0, 190, 0);
+    }
+}
+
+.videoHolder{
+    margin: 20px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.topicElementsHolder{
+    background-color: transparent;
+    height: 60px;
+    width: 100vw;
+    overflow-x: scroll;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.topicRibbonLabel{
+    height: 30px;
+    background-color: rgb(201, 201, 201);
+    font-size: 1.2rem;
+    margin-right: 20px;
+}
+
+.topicWraper{
+    background-color: rgb(201, 201, 201);
+    padding: 10px;
+    border-radius: 30px;
+}
+
+.topicRibbonButton{
+    border-radius: 50%;
+}
+
+.suggester{
+    background-color: transparent;
+    width: 50vw;
+    border: solid 2px black;
+    max-height: 400px;
+    overflow-y: scroll;
+}
+
+.suggestionHolder{
+    margin: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.suggestedOption{
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.2rem;
+    &:hover{
+        background-color: aliceblue;
+        cursor: pointer;
+    }
+}

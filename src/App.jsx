@@ -4,13 +4,16 @@ import React, { useState, useEffect } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import { Button } from './components/button';
 import { InputBox } from './components/searchbox';
+import HomePageNew from './components/homePageNew';
+import LectureSuggester from './components/lectureSuggester';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePageNew />} />
         <Route path="/search" element={<Search />} />
+        <Route path="/LectureSuggester" element={<LectureSuggester />} />
       </Routes>
     </BrowserRouter>
   );
@@ -46,7 +49,7 @@ function HomePage() {
           onKeyPress={handleKeyPress}
         />
         <button 
-          onClick={handleSearch} 
+          onClick={Search} 
           className="w-full text-white bg-blue-600 hover:bg-blue-700 transition-all duration-300 rounded-lg p-3 text-lg shadow-md font-semibold"
         >
           Search
@@ -56,7 +59,13 @@ function HomePage() {
   );
 }
 
-function Search() {
+function Search(query) {
+  fetch("http://127.0.0.1:5000/api/videoId?q=hello").then(elem => {
+    elem.json().then(elem => console.log(elem))
+  })
+}
+
+function Seardfch() {
   const location = useLocation();
   const query = new URLSearchParams(location.search).get("q");
   const [response, setResponse] = useState("");
@@ -73,7 +82,7 @@ function Search() {
         setLoading(true);
         
         // Initialize the API
-        const apiKey = ""; // Replace with your actual API key
+        const apiKey = "";
         const genAI = new GoogleGenerativeAI(apiKey);
         const model = genAI.getGenerativeModel({ model: "gemini-pro" });
         
