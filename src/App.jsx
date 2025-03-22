@@ -6,6 +6,7 @@ import { Button } from './components/button';
 import { InputBox } from './components/searchbox';
 import HomePageNew from './components/homePageNew';
 import LectureSuggester from './components/lectureSuggester';
+import WorkSheetWindow from './WorksheetMaker';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<HomePageNew />} />
         <Route path="/search" element={<Search />} />
         <Route path="/LectureSuggester" element={<LectureSuggester />} />
+        <Route path="/WorkSheet" element={<WorkSheetWindow />} />
       </Routes>
     </BrowserRouter>
   );
